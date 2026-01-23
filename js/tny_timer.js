@@ -22,7 +22,7 @@ function showClock() {
    // Displays the current date and time
    document.getElementById("currentTime").innerHTML ="<span>" + localDate + "</span>" + "<span>" + localTime + "</span>";
 
-   // Calls tje nextJuly4 function & sets the time to 9PM
+   // Calls the nextJuly4 function & sets the time to 9PM
    var j4Date = nextJuly4(); 
    j4Date.setHours(21);
 
