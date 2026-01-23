@@ -12,10 +12,10 @@
 */
 
 showClock();
-//setInterval("showClock()", 1000);
+setInterval("showClock()", 1000);
 function showClock() {
    // Stores the current date and time
-   var thisDay = new Date("May 19, 2018 9:31:27");
+   var thisDay = new Date;
    var localDate = thisDay.toLocaleDateString();
    var localTime = thisDay.toLocaleTimeString();
 
@@ -42,10 +42,14 @@ function showClock() {
 
 }
 
+
+
+
 function nextJuly4(currentDate) {
-   //var cYear = currentDate.getFullYear();  //! Causing errors
+   var currentDate = new Date; //! Not on the textbook, causes errors if not here
+   var cYear = currentDate.getFullYear();
    var jDate = new Date("July 4, 2018");
-   //jDate.setFullYear(cYear); //! Causing errors
-   if ((jDate - currentDate) < 0) jDate.setFullYear(cYear + 1); //! Wont work without above lines that cause errors
+   jDate.setFullYear(cYear);
+   if ((jDate - currentDate) < 0) jDate.setFullYear(cYear + 1);
    return jDate;
 }
